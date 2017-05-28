@@ -6,7 +6,6 @@ var models = [
           {title: 'Babarpur Station',placeID:  "5793732d498e5f281504f90c",selecton: false, show: true, lat: 29.449948, lng: 76.966355},
           {title: 'Japanese Garden',placeID: "578a2f40498ec46bdf6bcee8", selecton: false, show: true, lat: 30.703591, lng: 76.782387},
           {title: 'Shimla Reserve Forest Sanctuary',placeID: "4de083e945dd3eae87712d65", selecton: false, show: true, lat: 31.100030, lng: 77.246338},
-          {title: 'pawan garments', placeID: "ChIJZ8_uNI7sDzkRpY_hWG-eEuo",selecton: false, show: true, lat: 30.689929, lng: 76.790183 },
           {title: 'Panjab University',placeID: "4c4ae6f0f7b49c74e81efdc1",selecton: false, show: true, lat: 30.667780, lng: 76.817802 },
           {title: 'Mall Road',placeID: "5051e91ce4b0ae0d753698ef",selecton: false, show: true, lat: 32.243962, lng: 77.189445 }
 ];
