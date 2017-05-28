@@ -1,14 +1,14 @@
 var models = [
-          {title: 'Chitkara University',placeID: "ChIJ1-KmRCPDDzkRypkX6d5Gs4E", selecton: false, show: true, lat: 30.516034, lng: 76.659699},
-          {title: 'West Gate Mall', placeID: "ChIJWXYyc3MDDTkRx0mCjszFfVI",selecton: false, show: true, lat: 28.653111, lng: 77.123052},
-          {title: 'Paras Downtown Square Mall', placeID: "ChIJ_c7SvUvrDzkRfa8OVg7CaGk",selecton: false, show: true, lat: 30.659698, lng: 76.822030},
-          {title: 'Barbeque Nation', placeID: "ChIJedogrCHtDzkRBEx9LIGhVr4",selecton: false, show: true, lat: 30.726010, lng: 76.805316 },
-          {title: 'Babarpur Station',placeID:  "ChIJOUI426DZDTkRpQJOLO-YWUE",selecton: false, show: true, lat: 29.449948, lng: 76.966355},
-          {title: 'Japanese Garden',placeID: "ChIJP2EYBvbsDzkRu_PzQbxs7Qw", selecton: false, show: true, lat: 30.703591, lng: 76.782387},
-          {title: 'Shimla Reserve Forest Sanctuary',placeID: " ChIJZfpV5ceDBTkRpAciC_a8bvw", selecton: false, show: true, lat: 31.100030, lng: 77.246338},
+          {title: 'Chitkara University',placeID: "4e41412f6284809c9f3cac19", selecton: false, show: true, lat: 30.516034, lng: 76.659699},
+          {title: 'West Gate Mall', placeID: "4b5b8f6df964a5202c0729e3",selecton: false, show: true, lat: 28.653111, lng: 77.123052},
+          {title: 'Paras Downtown Square Mall', placeID: "4c133305a5eb76b09fa2bfb7",selecton: false, show: true, lat: 30.659698, lng: 76.822030},
+          {title: 'Barbeque Nation', placeID: "4bc429b42a89ef3b1bf8f588",selecton: false, show: true, lat: 30.726010, lng: 76.805316 },
+          {title: 'Babarpur Station',placeID:  "5793732d498e5f281504f90c",selecton: false, show: true, lat: 29.449948, lng: 76.966355},
+          {title: 'Japanese Garden',placeID: "578a2f40498ec46bdf6bcee8", selecton: false, show: true, lat: 30.703591, lng: 76.782387},
+          {title: 'Shimla Reserve Forest Sanctuary',placeID: "4de083e945dd3eae87712d65", selecton: false, show: true, lat: 31.100030, lng: 77.246338},
           {title: 'pawan garments', placeID: "ChIJZ8_uNI7sDzkRpY_hWG-eEuo",selecton: false, show: true, lat: 30.689929, lng: 76.790183 },
-          {title: 'Panjab University',placeID: "ChIJ27w-eojtDzkRlmHXip3S47k",selecton: false, show: true, lat: 30.667780, lng: 76.817802 },
-          {title: 'Mall Road',placeID: "ChIJMRlyjJV4BTkReIOyfWfxSOQ",selecton: false, show: true, lat: 32.243962, lng: 77.189445 }
+          {title: 'Panjab University',placeID: "4c4ae6f0f7b49c74e81efdc1",selecton: false, show: true, lat: 30.667780, lng: 76.817802 },
+          {title: 'Mall Road',placeID: "5051e91ce4b0ae0d753698ef",selecton: false, show: true, lat: 32.243962, lng: 77.189445 }
 ];
 
 var styles = [
@@ -113,6 +113,7 @@ var viewModel = function() {
         selection: ko.observable(indexMarker.selection),
         show: ko.observable(indexMarker.show),  
         animation: google.maps.Animation.DROP,
+	        placeID: indexMarker.placeID,
         icon: defaultIcon,
         id: 1
   });
@@ -188,7 +189,7 @@ var viewModel = function() {
 
     self.addApiInfo = function(indexMarker){
           $.ajax({
-            url: "https://api.foursquare.com/v2/venues/" + indexMarker.placeID + '&client_id=MHNQGZARQHKHVXJ0W2GO5BK3NZHOUJSHMTWL1YQEPMTXKJ01&client_secret=5SYVCHXBOGZZEOJ2BHT2QKT2TO4FKGTEL1TCDWE11VDGKQSF',
+            url: "https://api.foursquare.com/v2/venues/" + indexMarker.placeID + '&client_id=MHNQGZARQHKHVXJ0W2GO5BK3NZHOUJSHMTWL1YQEPMTXKJ01&client_secret=5SYVCHXBOGZZEOJ2BHT2QKT2TO4FKGTEL1TCDWE11VDGKQSF&v=20170527',
             dataType: "json",
             success: function(data){
               // stores results to display likes and ratings
